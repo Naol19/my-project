@@ -1,8 +1,8 @@
-public class Person {
-    public int id;
-    public String name;
-    public int age;
-    public boolean parent_permission;
+ class Person {
+     int id;
+     String name="unknown";
+     int age;
+     boolean parent_permission=true;
     //constructor
 
     public Person(int id, String name, int age, boolean parent_permission) {
@@ -10,10 +10,6 @@ public class Person {
         this.name = name;
         this.age = age;
         this.parent_permission = parent_permission;
-    }
-
-    public Person(int age) {
-        this(age, "unknown", 0, true);
     }
 
     public int getId() {
