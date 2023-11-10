@@ -4,10 +4,6 @@ public class Teacher extends Person {
         super(id, name, age, parent_permission);
         this.specialization = specialization;
     }
-
-    public Teacher(int id, String name, int age, boolean parent_permission) {
-        super(id, name, age, parent_permission);
-    }
         public boolean can_use_services(){
             return true;
 
