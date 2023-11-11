@@ -1,8 +1,14 @@
+
 class Person implements Nameable{
     int id;
      String name;
      int age;
      boolean parent_permission;
+ class Person {
+     int id;
+     String name="unknown";
+     int age;
+     boolean parent_permission=true;
     //constructor
 
     public Person(int id, String name, int age, boolean parent_permission) {
