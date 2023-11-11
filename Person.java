@@ -1,3 +1,9 @@
+
+class Person implements Nameable{
+    int id;
+     String name;
+     int age;
+     boolean parent_permission;
  class Person {
      int id;
      String name="unknown";
@@ -43,6 +49,10 @@
         if (age >= 18 || parent_permission == true) {
         }
         return true;
+    }
+    @Override
+    public String getCorrectName() {
+        return name;
     }
 }
 
