@@ -83,17 +83,19 @@ public   class App {
 
         System.out.print("Enter book title: ");
         String title = scanner.nextLine();
-
         Book book = findBookByTitle(title);
         if (book == null) {
             System.out.println("Book not found.");
             return;
         }
-        Date date = new Date();
-
-        Rental rental = new Rental(date,book,person);
-        rentals.add(rental);
-        System.out.println("Rental created successfully.");
+        else{
+            Date date = new Date();
+            System.out.printf("Enter The Date: ");
+            String d= scanner.nextLine();
+            Rental rental = new Rental(date,book,person);
+            rentals.add(rental);
+            System.out.println("Rental created successfully.");
+        }
     }
 
     public static void listRentalsForPerson() {
