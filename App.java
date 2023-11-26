@@ -6,11 +6,12 @@ public   class App {
     private static List<Book> books = new ArrayList<>();
     private static List<Person> people = new ArrayList<>();
     private static List<Rental> rentals = new ArrayList<>();
+    private static Date date;
 
     public static void listAllBooks() {
         System.out.println("List of books:");
         for (Book book : books) {
-            System.out.println(book.getTitle() + " by " + book.getAuthor());
+            System.out.println(book.getTitle() + " by   " + book.getAuthor());
         }
     }
 
@@ -89,10 +90,10 @@ public   class App {
             return;
         }
         else{
-            Date date = new Date();
+
             System.out.printf("Enter The Date: ");
             String d= scanner.nextLine();
-            Rental rental = new Rental(date,book,person);
+            Rental rental = new Rental(d,book,person);
             rentals.add(rental);
             System.out.println("Rental created successfully.");
         }
@@ -115,6 +116,7 @@ public   class App {
         for (Rental rental : rentals) {
             if (rental.getPerson().getId() == personId) {
                 System.out.println(rental.getBook().getTitle() + " by " + rental.getBook().getAuthor());
+                System.out.println("At Date: "+rental.getDate());
                 rentalsFound = true;
             }
         }
